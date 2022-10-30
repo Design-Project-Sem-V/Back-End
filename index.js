@@ -3,7 +3,6 @@ const app = express();
 const _ = require('lodash');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const https = require('https');
 const port = 3000 || process.env.PORT;
 
 
