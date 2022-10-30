@@ -19,7 +19,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 mongoose.connect("mongodb+srv://Umang:umangrathod@cluster0.dfyu3vv.mongodb.net/HMS-DB", {useNewUrlParser :true});
 
 app.get('/',(req,res)=>{
-    res.send(`Successfully connected to port ${port}`);
+    console.log("Connected to the server");
+    res.send("Connected");
 });
 
 app.post('/signup_user', (req, res)=>{
