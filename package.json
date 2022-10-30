@@ -16,7 +16,7 @@
     "mongoose": "^6.7.0"
   },
 
-  "engine": {
+  "engines": {
     "node": "16.18.2",
     "npm": "8.19.2"
   }
