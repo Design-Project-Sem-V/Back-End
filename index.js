@@ -3,17 +3,23 @@ const app = express();
 const _ = require('lodash');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const port = 3000 || process.env.port;
+const https = require('https');
+const port = 3000 || process.env.PORT;
 
 
 // Models
 const Doctor = require('./models/doctorModel');
-const User = require('./models/userModel')
+const User = require('./models/userModel');
 
 
 // Extra Settings :)
 app.use(express.urlencoded({extended: true}));
 app.use(bodyParser.urlencoded({extended:true}));
+
+
+// var favicon = require('serve-favicon');
+// app.use(favicon(__dirname + '/favicon.png'));
+
 
 
 mongoose.connect("mongodb+srv://Umang:umangrathod@cluster0.dfyu3vv.mongodb.net/HMS-DB", {useNewUrlParser :true});
@@ -109,5 +115,5 @@ app.get('/login_doctor', (req, res)=>{
 });
 
 app.listen(port,()=>{
-    console.log(`Listening to port ${port}`);
+    console.log("Listening");
 });
